@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 	
 			getContactsList: async ()=>{
-        let resp = await fetch("https://playground.4geeks.com/contact/agendas/marian", {
+        let resp = await fetch("https://playground.4geeks.com/contact/agendas/sousan", {
           method: "GET",
           headers: {
             "Content-Type":"aplication/json",
@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         if (resp.status === 404) {
           console.log("Agenda creada")
-          await fetch("https://playground.4geeks.com/contact/agendas/marian",{        
+          await fetch("https://playground.4geeks.com/contact/agendas/sousan",{        
             method: "POST", 
             headers: {
               "Content-Type":"aplication/json",
@@ -34,7 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       createNewContact: async ({ fullName, phone, email, address }) => {
-        let resp = await fetch("https://playground.4geeks.com/contact/agendas/marian/contacts", {
+        let resp = await fetch("https://playground.4geeks.com/contact/agendas/sousan/contacts", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       updateContact: async (contactId, fullName, phone, email, address ) => { 
-        let resp = await fetch(`https://playground.4geeks.com/contact/agendas/marian/contacts/${contactId}`,{
+        let resp = await fetch(`https://playground.4geeks.com/contact/agendas/sousan/contacts/${contactId}`,{
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
       deleteContact:async (id)=>{
-        let resp = await fetch(`https://playground.4geeks.com/contact/agendas/marian/contacts/${id}`,{
+        let resp = await fetch(`https://playground.4geeks.com/contact/agendas/sousan/contacts/${id}`,{
           method: "DELETE",
           headers: {
               "Content-Type": "application/json",

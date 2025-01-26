@@ -25,11 +25,7 @@ export const Modal = (props) => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
-                <p>
-                  If you delete this thing, the entire universe will go down!
-                </p>
-              </div>
+              
               <div className="modal-footer">
 
                 <button
@@ -37,14 +33,14 @@ export const Modal = (props) => {
                   className="btn btn-primary"
                   onClick={props.handlerClose}
                 >
-                  Oh no!
+                    no!
                 </button>
                 <button
                   type="button"
                   className="btn btn-secondary"
                   onClick={props.handlerDelete}
                 >
-                  Yes baby!
+                  Yes!
                 </button>
               </div>
             </div>
